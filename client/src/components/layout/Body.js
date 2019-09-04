@@ -4,7 +4,7 @@ import useStyles from "../../styles";
 import {BrowserRouter, Route} from "react-router-dom"
 import Artist from "../../containers/Artist"
 import Work from "../../containers/Work"
-import Rental from "../../containers/Rental"
+import RentalArtist from "../../containers/RentalArtist"
 import Profile from "../../containers/Profile"
 import SignUp from "../../containers/SignUp"
 import Login from "../../containers/Login"
@@ -17,11 +17,11 @@ export default function Album() {
     <React.Fragment>
       <main>
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
+          <Container>
             <BrowserRouter>
               <Route exact path="/artist" component={Artist} />
               <Route exact path="/work" component={Work} />
-              <Route exact path="/rental" component={Rental} />
+              <Route exact path="/rental" component={RentalArtist} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/login" component={Login} />
