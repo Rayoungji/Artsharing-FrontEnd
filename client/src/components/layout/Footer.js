@@ -1,7 +1,7 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import useStyles from "../../styles";
+import useStyles from "../../styles/Frameindex";
 
 export default function Album() {
   const classes = useStyles();
