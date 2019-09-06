@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
+import Grid from '@material-ui/core/Grid';
 
 class CustomizedInputBase extends Component {
 
@@ -29,17 +30,27 @@ class CustomizedInputBase extends Component {
       
     return(
       <Paper className={classes.root}>
-     
-        <InputBase
-          className={classes.input}
-          placeholder="검색어를 입력하세요.."
-          name="searchKeyword"
-          value={this.state.searchKeyword}
-          onChange={this.handleValueChange}
-        />
-        <IconButton className={classes.iconButton} aria-label="search">
-          <SearchIcon />
-        </IconButton>
+     <Grid container spacing={3}>
+
+<Grid className={classes.root} item xs/>   
+<Grid className={classes.root} item xs/> 
+<Grid className={classes.root} item xs>
+  <Paper>
+    <IconButton className={classes.iconButton} aria-label="search">
+      <SearchIcon />
+    </IconButton>
+    <InputBase
+      className={classes.input}
+      placeholder="검색어를 입력하세요.."
+      name="searchKeyword"
+      value={this.state.searchKeyword}
+      onChange={this.handleValueChange}
+    />
+    
+  </Paper>
+</Grid>   
+
+</Grid>
       
     </Paper>   
     );

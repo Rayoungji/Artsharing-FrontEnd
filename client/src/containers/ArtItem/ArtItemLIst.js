@@ -24,7 +24,7 @@ class ArtItemList extends Component {
      
       {
         id: "2",
-       title: "My second post",
+       title: "My second postasdlkjflaksdjfladsjfladsjflkajflkdsjaflkasjflkadjsfkladjsflajds",
        artist: "라영지",
        image: "https://bit.ly/2WNi2Ml",
        rentalDate: "date",
@@ -133,7 +133,7 @@ class ArtItemList extends Component {
    mapToComponents = (data) => { 
     data.sort(); 
     data = data.filter( (contact) => { 
-        return contact.title.indexOf(this.state.keyword) > -1; 
+        return contact.title.toLowerCase().indexOf(this.state.keyword) > -1; 
       }
     ); 
    return <ArtItem artItems={data}/> }
@@ -145,8 +145,10 @@ class ArtItemList extends Component {
       <div>
         <CssBaseline/>
         <Container maxWidth="md">
-          <ArtItemListForm onData={this.handleChange} />
-          {this.mapToComponents(this.state.artItems)}
+            <ArtItemListForm onData={this.handleChange} />
+            {this.mapToComponents(this.state.artItems)}
+
+         
         </Container>
       </div>
     )
