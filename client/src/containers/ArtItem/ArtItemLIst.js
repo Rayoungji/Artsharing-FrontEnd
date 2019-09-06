@@ -3,9 +3,6 @@ import Container from '@material-ui/core/Container';
 import ArtItemListForm from './ArtItemListForm';
 import ArtItem from './ArtItem';
 import { CssBaseline } from '@material-ui/core';
-import {BrowserRouter, Route} from "react-router-dom"
-import ArtItemMore from './ArtItemMore'
-
 
 class ArtItemList extends Component {
 
@@ -151,10 +148,6 @@ class ArtItemList extends Component {
           <ArtItemListForm onData={this.handleChange} />
           {this.mapToComponents(this.state.artItems)}
         </Container>
-        <BrowserRouter>
-        <Route exact path="/ArtItemMore/:id" component={ArtItemMore} />
-        </BrowserRouter>
-
       </div>
     )
   }

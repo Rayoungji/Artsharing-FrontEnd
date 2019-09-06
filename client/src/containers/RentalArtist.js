@@ -38,6 +38,7 @@ export default class RentalArtist extends Component {
         ]
 
         return (
+            
             <Paper className={classes.root}>
             <Table className={classes.table}>
             <TableHead>

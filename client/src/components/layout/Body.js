@@ -2,12 +2,12 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import useStyles from "../../styles/Frameindex"
 import {BrowserRouter, Route} from "react-router-dom"
-import ArtWork from "../../containers/ArtWork"
+import Artist from "../../containers/Artist"
 import RentalArtist from "../../containers/RentalArtist"
 import Profile from "../../containers/Profile"
 import SignUp from "../../containers/SignUp"
-import Login from "../../containers/Login"
-import ArtItemList from '../../containers/ArtItemLIst'
+import Art from '../../containers/ArtItem/Art'
+import RentalArt from '../../containers/RentalArt'
 
 export default function Album() {
 
@@ -19,12 +19,12 @@ export default function Album() {
         <div className={classes.heroContent}>
           <Container>
             <BrowserRouter>
-              <Route exact path="/artist" component={ArtItemList} />
-              <Route exact path="/work" component={ArtWork} />
-              <Route exact path="/rental" component={RentalArtist} />
+              <Route exact path="/art" component={Art} />
+              <Route exact path="/artist" component={Artist} />
+              <Route exact path='/rentalArt' component={RentalArt} />
+              <Route exact path="/rentalArtist" component={RentalArtist} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/login" component={Login} />
             </BrowserRouter>
           </Container>
         </div>

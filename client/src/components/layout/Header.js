@@ -26,12 +26,12 @@ export default function Album() {
           <Typography variant="h6" className={classes.title}>
             Art Sharing
           </Typography>
-          <Button color="inherit" href="/work">작품</Button>
+          <Button color="inherit" href="/art">작품</Button>
           <Button color="inherit" href="/artist">작가</Button>
-          <Button color="inherit" href="/rental">마이페이지</Button>
+          <Button color="inherit" href="/rentalArtist">마이페이지</Button>
           <Select value='마이페이지'>
-            <MenuItem><Button href="/work">작품관리</Button></MenuItem>
-            <MenuItem><Button href="/rental">대여관리</Button></MenuItem>
+            <MenuItem><Button href="/rentalArt">작품관리</Button></MenuItem>
+            <MenuItem><Button href="/rentalArtist">대여관리</Button></MenuItem>
             <MenuItem><Button href="/profile">회원정보</Button></MenuItem>
           </Select>
           <Button color="inherit" href="/SignUp">회원가입</Button>
