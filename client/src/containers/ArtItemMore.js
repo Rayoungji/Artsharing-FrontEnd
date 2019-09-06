@@ -6,12 +6,7 @@ import Container from '@material-ui/core/Container';
 const ArtItemMore =({match}) => {
     
         console.log(match.params)
-
-        const state={
-            id:''
-            
-        }
-
+        
         return (
             <div>
                 <Container maxWidth="sm">

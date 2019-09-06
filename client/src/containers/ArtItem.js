@@ -12,15 +12,15 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 class ArtItem extends Component {
 
     render() {
-        
         const {artItems} = this.props;
         const classes = useStyles.bind();
-           
+        
         return (
             <div>
                 <Grid container spacing={4}>
                 {artItems.map(card => (
                     <Grid item key={card} xs={12} sm={6} md={4}>   
+                  
                     <Card className={classes.card}>
                     <CardActionArea> 
                         <CardMedia
@@ -28,7 +28,7 @@ class ArtItem extends Component {
                             height="140"
                             className={classes.cardmedia}
                             image={card.image}
-                            title="Image title"
+                            title={card.title}
                         />
                         <CardContent className={classes.cardContent} >
                             <Typography gutterBottom variant="h5" component="h2">
@@ -40,17 +40,17 @@ class ArtItem extends Component {
                         </CardContent>
                     
                         <CardActions>
-                            <Button href = {`/artItemMore/${card.id}`} size="small" color="primary">
+                            <Button href = {`/ArtItemMore/${card.id}`} size="small" color="primary">
                                 작품 상세보기
                             </Button>
                         </CardActions>                  
                     </CardActionArea>
                     </Card>
                      
-                </Grid>
+                    </Grid>
                 ))}
 
-            </Grid>
+                </Grid>
             </div>
         )
     }
