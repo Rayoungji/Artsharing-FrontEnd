@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import useStyles from "../../styles/ArtItemListIndex";
 import CardActionArea from '@material-ui/core/CardActionArea';
 
+
 class ArtItem extends Component {
 
     render() {
@@ -32,17 +33,17 @@ class ArtItem extends Component {
                         />
                         <CardContent className={classes.cardContent} >
                             <Typography gutterBottom variant="h5" component="h2">
-                                작품명 {card.title}
+                                작품명: {card.title}
                             </Typography>
                             <Typography>
-                                작가 {card.artist}
+                                작가: {card.artist}
                             </Typography>
                         </CardContent>
                     
                         <CardActions>
-                            <Button href = {`/ArtItemMore/${card.id}`} size="small" color="primary">
+                            <Button href={`/ArtItemMore/${card.id}`} size="small" color="primary">
                                 작품 상세보기
-                            </Button>
+                            </Button >
                         </CardActions>                  
                     </CardActionArea>
                     </Card>
