@@ -37,7 +37,7 @@ render() {
 
     return (
         <div>
-            <Button color="inherit" onClick={this.handleClickOpen}>
+            <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
                  결제하기
             </Button>
       <Dialog open={this.state.open} onClose={this.handleClose}>

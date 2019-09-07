@@ -17,6 +17,7 @@ class ArtItemList extends Component {
        artist: "신가은",
        image: "https://bit.ly/2WNi2Ml",
        rentalDate: "date",
+       price:'10000',
        rentalToggle: "true",
        descript: "1번 작품입니다.",
 
@@ -28,6 +29,7 @@ class ArtItemList extends Component {
        artist: "라영지",
        image: "https://bit.ly/2WNi2Ml",
        rentalDate: "date",
+       price:'10000',
        rentalToggle: "true",
        descript: "2번 작품입니다.",
 
@@ -39,6 +41,7 @@ class ArtItemList extends Component {
        artist: "김수연",
        image: "https://bit.ly/2WNi2Ml",
        rentalDate: "date",
+       price:'10000',
        rentalToggle: "true",
        descript: "3번 작품입니다.",
 
@@ -50,6 +53,7 @@ class ArtItemList extends Component {
        artist: "박선형",
        image: "https://bit.ly/2WNi2Ml",
        rentalDate: "date",
+       price:'10000',
        rentalToggle: "true",
        descript: "4번 작품입니다.",
 
@@ -61,6 +65,7 @@ class ArtItemList extends Component {
        artist: "홍영준",
        image: "https://bit.ly/2WNi2Ml",
        rentalDate: "date",
+       price:'10000',
        rentalToggle: "true",
        descript: "5번 작품입니다.",
 
@@ -72,6 +77,7 @@ class ArtItemList extends Component {
        artist: "조정석",
        image: "https://bit.ly/2WNi2Ml",
        rentalDate: "date",
+       price:'10000',
        rentalToggle: "true",
        descript: "6번 작품입니다.",
 
@@ -83,6 +89,7 @@ class ArtItemList extends Component {
           artist: "공유",
           image: "https://bit.ly/2WNi2Ml",
           rentalDate: "date",
+          price:'10000',
           rentalToggle: "true",
           descript: "7번 작품입니다.",
 
@@ -94,6 +101,7 @@ class ArtItemList extends Component {
           artist: "현재호",
           image: "https://bit.ly/2WNi2Ml",
           rentalDate: "date",
+          price:'10000',
           rentalToggle: "true",
           descript: "8번 작품입니다.",
 
@@ -105,6 +113,7 @@ class ArtItemList extends Component {
           artist: "전대식",
           image: "https://bit.ly/2WNi2Ml",
           rentalDate: "date",
+          price:'10000',
           rentalToggle: "true",
           descript: "9번 작품입니다.",
 
@@ -116,6 +125,7 @@ class ArtItemList extends Component {
           artist: "전대식",
           image: "https://bit.ly/2WNi2Ml",
           rentalDate: "date",
+          price:'10000',
           rentalToggle: "true",
           descript: "10번 작품입니다.",
 
@@ -147,8 +157,6 @@ class ArtItemList extends Component {
         <Container maxWidth="md">
             <ArtItemListForm onData={this.handleChange} />
             {this.mapToComponents(this.state.artItems)}
-
-         
         </Container>
       </div>
     )

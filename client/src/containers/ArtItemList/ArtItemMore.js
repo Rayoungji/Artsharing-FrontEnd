@@ -35,9 +35,15 @@ const ArtItemMore =({match}) => {
                         작품설명: 이것은 무서운 공룡사진입니다. 무섭죠?
                       </Typography>
                       <Typography gutterBottom variant="subtitle1">
+                        대여가격: 10000
+                      </Typography>
+                      <Typography gutterBottom variant="subtitle1">
                         대여기간: 2018.10.12~2018.10.30
                       </Typography>
-                    <PayButton />
+                      <Typography gutterBottom>
+                      <PayButton />
+                      </Typography>
+                    <Button variant="outlined" color="primary" href="/artItemList">되돌아가기</Button>
                     </Grid>
                   </Grid>
                   </Grid>

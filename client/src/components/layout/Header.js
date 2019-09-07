@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import useStyles from "../../styles/FrameIndex2";
+import Grid from '@material-ui/core/Grid';
 import Login from '../../containers/Login';
 
 export default function Blog() {
@@ -12,22 +13,29 @@ export default function Blog() {
 
   return (
     <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Toolbar className={classes.toolbar}>
-          <Typography
-            component="h2"
-            variant="h5"
-            color="inherit"
-            align='center'
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            SK-Art-sharing
-          </Typography>
-            <Button color="inherit" href="/SignUp">회원가입</Button>
-            <Login />
-        </Toolbar>
+    <CssBaseline />
+    <Container maxWidth="lg">
+      <Toolbar className={classes.toolbar}>
+        <Grid container sm="6">
+        <Button href="/">
+        <Typography
+          component="h2"
+          variant="h5"
+          color="inherit"
+          align='center'
+          noWrap
+          className={classes.toolbarTitle}
+        >
+          SK-Art-sharing
+        </Typography>
+        </Button>
+        </Grid>
+        <Grid container sm="4" ></Grid>
+        <Grid container sm="2">
+          <Button color="inherit" href="/SignUp">회원가입</Button>
+          <Login />
+        </Grid>
+      </Toolbar>
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
         <Button color="inherit" noWrap   variant="body2"  className={classes.toolbarLink}  href="/artItemList">작품보기</Button>
           <Button color="inherit" href="/artistList">작가보기</Button>
