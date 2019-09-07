@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Card } from '@material-ui/core';
 import useStyles from '../../styles/ArtItemMoreIndex'
+import PayButton from '../ArtItemList/PayButton'
 
 const ArtItemMore =({match}) => {
 
@@ -13,7 +14,7 @@ const ArtItemMore =({match}) => {
     console.log(match.params.id)
 
         return (
-            <div className={classes.root}>
+            <div>
             <Paper className={classes.paper}>
               <Grid container spacing={8}>
                 <Grid item>
@@ -23,7 +24,7 @@ const ArtItemMore =({match}) => {
                 </Grid>
                 <Grid item xs={12} sm container>
                   <Grid item xs container direction="column" spacing={2}>
-                    <Grid item xs>
+                    <Grid item xs paddingtop='50'>
                       <Typography gutterBottom variant="subtitle1">
                         작품명: 무서운 공룡사진
                       </Typography>
@@ -36,9 +37,7 @@ const ArtItemMore =({match}) => {
                       <Typography gutterBottom variant="subtitle1">
                         대여기간: 2018.10.12~2018.10.30
                       </Typography>
-                      <Button  size="small" color="primary">
-                       대여신청
-                      </Button >
+                    <PayButton />
                     </Grid>
                   </Grid>
                   </Grid>

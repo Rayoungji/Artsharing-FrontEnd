@@ -22,28 +22,28 @@ class ArtItem extends Component {
                 {artItems.map(card => (
                     <Grid item key={card} xs={12} sm={6} md={4}>   
                   
-                    <Card className={classes.card}>
+                    <Card className={classes.card} >
                     <CardActionArea> 
                         <CardMedia
                             component="img"
-                            height="140"
+                            height="250"
                             className={classes.cardmedia}
                             image={card.image}
                             title={card.title}
                         />
                         <CardContent className={classes.cardContent} >
                             <Typography gutterBottom variant="h5" component="h2">
-                                작품명: {card.title}
+                                {card.title}
                             </Typography>
                             <Typography>
-                                작가: {card.artist}
+                                {card.artist}
                             </Typography>
                         </CardContent>
                     
                         <CardActions>
-                            <Button href={`/ArtItemMore/${card.id}`} size="small" color="primary">
+                            <Button href = {`/ArtItemMore/${card.id}`} size="small" color="primary">
                                 작품 상세보기
-                            </Button >
+                            </Button>
                         </CardActions>                  
                     </CardActionArea>
                     </Card>

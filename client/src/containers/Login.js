@@ -22,8 +22,8 @@ handleClickOpen= ()=> {
 
   handleClose= ()=> {
     this.setState({
-      아이디:'',
-      비밀번호:'',
+      id:'',
+      password:'',
       open: false  //Dialog 텍스트를 초기화 하고 닫아준다
     })
   }
