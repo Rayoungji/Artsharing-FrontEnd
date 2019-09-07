@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Artist extends Component {
+export default class ArtistList extends Component {
   render() {
     return (
       <div>

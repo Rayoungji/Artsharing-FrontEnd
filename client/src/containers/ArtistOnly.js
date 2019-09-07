@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class RentalArt extends Component {
+export default class ArtistOnly extends Component {
     render() {
         return (
             <div>

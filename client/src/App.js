@@ -1,14 +1,17 @@
 import React from 'react';
-import Layout from "./containers/Layout";
+import { Header, Body, Footer } from "./components/layout";
 
-/*
- Stateless componet 
- */
 const App = () => {
+
   return (
-    <Layout />
+  <div>
+    <Header />
+    <Body />
+    <Footer />
+  </div>  
+
   )
-}
+};
 
 export default App
 

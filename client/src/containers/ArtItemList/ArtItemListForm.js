@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import Grid from '@material-ui/core/Grid';
 
-class CustomizedInputBase extends Component {
+class ArtItemListForm extends Component {
 
   constructor(props) {
     super(props);
@@ -58,4 +58,4 @@ class CustomizedInputBase extends Component {
 
     
 }
-export default CustomizedInputBase;
+export default ArtItemListForm;
