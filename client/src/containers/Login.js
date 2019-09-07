@@ -49,7 +49,7 @@ render() {
     return (
         <div>
             <Button color="inherit" onClick={this.handleClickOpen}>
-                 Login
+                 로그인
             </Button>
       <Dialog open={this.state.open} onClose={this.handleClose}>
         <DialogTitle>Login</DialogTitle>
