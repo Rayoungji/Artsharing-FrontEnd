@@ -11,13 +11,15 @@ import ArtItemList from '../../containers/ArtItemList/ArtItemLIst'
 import ArtistOnly from '../../containers/ArtistOnly'
 import ArtItemMore from '../../containers/ArtItemList/ArtItemMore'
 import Main from '../../containers/Main'
+import Button from "@material-ui/core/Button"
 
-export default function Blog() {
+export default function Blog({data, onDelete}) {
   const classes = useStyles();
 
   return (
 
     <React.Fragment>
+      {(data && data.contacts) ? (data.contacts.map(d=>(<div>{d.id} <Button onClick={()=>onDelete(d.id)}>Delete</Button></div>))): (<div>데이터가 없다</div>)}
       <CssBaseline />
       <Container maxWidth="lg">
       
