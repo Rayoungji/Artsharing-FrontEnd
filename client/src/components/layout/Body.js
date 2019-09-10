@@ -1,10 +1,5 @@
-
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import useStyles from "../../styles/FrameIndex2"
 import {BrowserRouter, Route} from "react-router-dom"
