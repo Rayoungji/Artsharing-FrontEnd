@@ -1,11 +1,24 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { MemoryRouter as Router } from 'react-router';
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
-export default class SignUp extends Component {
-  render() {
-    return (
-      <div>
-        회원가입 창입니다
-      </div>
-    )
-  }
+// The usage of React.forwardRef will no longer be required for react-router-dom v6.
+// see https://github.com/ReactTraining/react-router/issues/6056
+const AdapterLink = React.forwardRef((props, ref) => <Link innerRef={ref} {...props} />);
+
+const CollisionLink = React.forwardRef((props, ref) => (
+  <Link innerRef={ref} to="/getting-started/installation/" {...props} />
+));
+
+export default function ButtonRouter() {
+  return (
+    <Router>
+      <Button href="/signup1" color="primary" >
+      개인
+      </Button>
+      <Button href="/signup2" color="primary" >
+      작가</Button>
+    </Router>
+  );
 }

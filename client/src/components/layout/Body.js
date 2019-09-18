@@ -11,7 +11,9 @@ import ArtItemList from '../../containers/ArtItemList/ArtItemLIst'
 import ArtistOnly from '../../containers/ArtistOnly'
 import ArtItemMore from '../../containers/ArtItemList/ArtItemMore'
 import Main from '../../containers/Main'
-import Button from "@material-ui/core/Button"
+import SignUp1 from '../../containers/signup1'
+import SignUp2 from '../../containers/signup2'
+
 
 export default function Blog({data, onDelete}) {
   const classes = useStyles();
@@ -19,7 +21,7 @@ export default function Blog({data, onDelete}) {
   return (
 
     <React.Fragment>
-      {(data && data.contacts) ? (data.contacts.map(d=>(<div>{d.id} <Button onClick={()=>onDelete(d.id)}>Delete</Button></div>))): (<div>데이터가 없다</div>)}
+      {/*{(data && data.contacts) ? (data.contacts.map(d=>(<div>{d.id} <Button onClick={()=>onDelete(d.id)}>Delete</Button></div>))): (<div>데이터가 없다</div>)}*/}
       <CssBaseline />
       <Container maxWidth="lg">
       
@@ -34,6 +36,8 @@ export default function Blog({data, onDelete}) {
               <Route exact path="/profile" component={Profile} />{/*회원정보란*/}
               <Route exact path="/signup" component={SignUp} />{/*회원가입*/}
               <Route exact path="/ArtItemMore/:id" component={ArtItemMore} />{/*작품상세화면*/}
+              <Route exact path="/signup1" component={SignUp1} />{/*개인회원가입*/}
+              <Route exact path="/signup2" component={SignUp2} />{/*작가회원가입*/}
             </BrowserRouter>
           </Container>
           </div>
