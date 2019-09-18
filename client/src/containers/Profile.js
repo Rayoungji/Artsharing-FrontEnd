@@ -1,54 +1,92 @@
 //회원정보
-import React, { useState, Component, Fragment} from 'react';
-import useStyles from '../styles/ArtItemMoreIndex';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import React, { useState} from 'react';
 import Input from "@material-ui/core/Input";
 import FormLabel from "@material-ui/core/FormLabel";
-import { Container, CardMedia } from '@material-ui/core';
-import CardActionArea from '@material-ui/core/CardActionArea';
+import { Container } from '@material-ui/core';
 import { Card } from '@material-ui/core';
 
 
-class Profile extends Component {
+const Artist = () => {
+  
+    const [name, setName] = useState();
+    const [date, setDate] = useState();
+    const [sex, setSex] = useState();
+    const [affiliation, setAffiliation] = useState();
 
-    state={
-        profiles: [
-            {
-        image:"https://bit.ly/2WNi2Ml",
-        name:'현재호',
-        age:'24',
-        sex:'남',
-        belong:'개인'}
-    ]
-    }
 
-    handleChange = (e) => {
-        this.setState({
-           [e.target.name]: e.target.value
-        })
-    }
+    const setNameText = e => {
+        setName(e.target.value);
+    };
+    const setDateText = e => {
+      setDate(e.target.value);
+  };
+    
+    const setSexText = e => {
+        setSex(e.target.value);
+    };
+   
+   
+    const setAffiliationText = e => {
+        setAffiliation(e.target.value);
+    };
+    const save = e => {
+        e.preventDefault();
+        const isKorean = /[A-Za-z0-9]/;
+     
 
-    render(){
+        
+    };
+   
 
-        const {profiles} = this.state;
-        const classes = useStyles.bind();
 
-        return(
+    return (
+        <>
+        <h1>회원정보</h1>
+        <div className="Artist">
+        <Card >
+                    <img  alt="complex" src="https://bit.ly/2WNi2Ml" />
+                  </Card>
+          <div>
+              <input type="file" name="file" onChange={null}/>
+              
 
-            <div>
-           {profiles.map(c => (
-                <Card>
-                    <CardMedia
-                    component="img"
-                    height="250"
-                    className={classes.cardmedia}
-                    img="https://bit.ly/2WNi2Ml"/>
-              </Card>))}
+          </div>
+          
+            <form onSubmit={save}>
+                <FormLabel htmlFor="name">이름</FormLabel>
+                <Input
+                name="name"
+                id="name"
+                placeholder=""
+                onChange={setNameText}
+                />
+                <br />
+                <FormLabel htmlFor="date">생년월일</FormLabel>
+                <Input id="date" name="date" onChange={setDateText} />
+                <br />
+                <FormLabel htmlFor="sex">성별</FormLabel>
+                <Input id="sex" name="sex" onChange={setSexText}/>
+                  
+                <br />
+                
+                
+                <FormLabel htmlFor="affiliation">소속</FormLabel>
+                <Input
+                name="affiliation"
+                id="affiliation"
+                placeholder=" "
+                onChange={setAffiliationText}
+                />
+
+                <br />
+                <Input type="submit" value="수정" />
+                </form>
+                
                 </div>
-        )    
-    }
-}
-export default Profile;    
+                </>
+    );
+                
+    };
+    
+
+export default Artist;

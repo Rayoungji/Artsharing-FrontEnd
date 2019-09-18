@@ -4,22 +4,32 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { Checkbox } from '@material-ui/core';
-
+import { Checkbox, Paper, DialogContentText } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
+//서버로 대여료&반납날짜 보내주기 -> (반납일-현재날짜)*대여료
 class PayButton extends Component {
 
   state={
+    returnDate:'',
     open:false  //dialog 창이 열려있는지 유무
 }
 
-handleClickOpen= ()=> {
+handleClickOpen= (e)=> {
     this.setState({
       open: true  //Dialog 창을 열어준다
     });
   }
 
+  handleValueChange= (e)=> {
+    this.setState({
+      returnDate:e.target.value
+    })
+  }
+
   handleClose= ()=> {
     this.setState({
+      rentDate:'',
+      returnDate:'',
       open: false  //Dialog 텍스트를 초기화 하고 닫아준다
     })
   }
@@ -35,7 +45,9 @@ handleClickOpen= ()=> {
 
 render() {
 
+
     return (
+
         <div>
             <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
                  결제하기
@@ -49,8 +61,12 @@ render() {
        휴대폰결제<Checkbox />
        무통장입금<Checkbox />
             </DialogContent>
+            <DialogContent>반납날짜를 입력하세요.</DialogContent>
+            <DialogContent>
+            <TextField name="rentDate" type="date" value={this.state.returnDate} onChange={this.handleValueChange}/>
+            </DialogContent>
             <DialogActions>
-            <Button variant="outlined" color="primary" onClick={this.handleFormSubmit}>예</Button>
+            <Button variant="outlined" color="primary" onClick={this.handleFormSubmTeit}>예</Button>
           <Button variant="outlined" color="primary" onClick={this.handleClose}>아니오</Button>
         </DialogActions>
         </Dialog>
