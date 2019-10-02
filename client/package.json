@@ -32,5 +32,59 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://api.androidhive.info"
+  "proxy": "http://192.168.11.233:8080",
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2016,
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "linebreak-style": 0,
+        "quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/prefer-stateless-function": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ]
+    }
+},
+"devDependencies": {
+  "eslint-config-airbnb": "^17.1.1"
+}
 }

@@ -28,7 +28,7 @@ export default function Blog({data, onDelete}) {
       
  <div className={classes.heroContent}>
           <Container>
-            <BrowserRouter>
+    
               <Route exact path="/" component={Main} /> {/*메인화면*/}
               <Route exact path="/artItemList" component={ArtItemList} /> {/*작품리스트*/}
               <Route exact path="/artist" component={ArtistList} />{/*작가리스트*/}
@@ -40,7 +40,7 @@ export default function Blog({data, onDelete}) {
               <Route exact path="/ArtistOnlyMore/:id" component={ArtistOnlyMore} />{/*작가-작품상세화면*/}
               {/* <Route exact path="/signup1" component={SignUp1} />{/*개인회원가입*/}
               {/* <Route exact path="/signup2" component={SignUp2} />작가회원가입 */} 
-            </BrowserRouter>
+          
           </Container>
           </div>
       </Container>

@@ -5,6 +5,8 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Axios from '../lib';
+import {withRouter} from 'react-router-dom';
 
 class Login extends Component {
 
@@ -34,13 +36,31 @@ handleClickOpen= ()=> {
     this.setState(nextState);
   }
 
-  handleFormSubmit= (e)=> {
+  handleFormSubmit=async (e)=> {
     e.preventDefault() //axios를 통하여 데이터를 넘겨주는 부분 구현해야 함
-    this.setState({
-        id:'',
-        password:'',
-      open: false
-    })
+    console.log(this.state);
+    const {id,password}=this.state;
+    const {history,handleLogin}=this.props;
+  
+
+    try {
+     const response= await Axios.post("/artSharing/sign",{
+        id,   //똑같아서 생략 가능
+        pw:password
+      })
+
+      this.handleClose();
+      handleLogin(true);
+      console.log(response);
+      history.push("/");
+
+    }catch(error){
+      alert(error);
+      console.log(error);
+      
+    };
+    
+  
   }
 
 
@@ -66,4 +86,4 @@ render() {
     )
 }
   }
-export default Login;
+export default withRouter(Login);

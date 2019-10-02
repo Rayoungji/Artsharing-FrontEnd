@@ -7,9 +7,38 @@ import Container from '@material-ui/core/Container';
 import useStyles from "../../styles/FrameIndex2";
 import Grid from '@material-ui/core/Grid';
 import Login from '../../containers/Login';
+import {Link} from "react-router-dom";
+import Axios from 'axios';
 
-export default function Blog() {
-  const classes = useStyles();
+ class Blog extends React.Component {
+   state={
+     isLogin:false
+   }
+
+   handleLogin=(isLogin)=>{
+    this.setState({
+      isLogin
+    })
+   }
+
+   handleLogout=async()=>{
+     try{
+    await Axios.get("/artSharing/sign/logout");
+    this.setState({
+      isLogin: false
+    })
+    }
+     
+     catch(error){
+      alert(error);
+      console.log(error);
+      
+    };
+
+   }
+   render(){
+  const classes = useStyles.bind();
+  const {isLogin}=this.state;
 
   return (
     <React.Fragment>
@@ -33,15 +62,16 @@ export default function Blog() {
         <Grid container sm="4" ></Grid>
         <Grid container sm="2">
           <Button color="inherit" href="/SignUp">회원가입</Button>
-          <Login />
+         {isLogin==false && <Login handleLogin={this.handleLogin} />}
+         {isLogin==true && <Button onClick={this.handleLogout}>Logout</Button>}
         </Grid>
       </Toolbar>
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
         <Button color="inherit" noWrap   variant="body2"  className={classes.toolbarLink}  href="/artItemList">작품보기</Button>
-          <Button color="inherit" href="/artistList">작가보기</Button>
+         <Link to="/artistList"> <Button color="inherit">작가보기</Button></Link>
             <Button color='inherit' href="/artistOnly">작품관리</Button>
             <Button color='inherit' href="/rentList">대여관리</Button>
-          <Button color='inherit' href="/profile">회원정보</Button>
+         {isLogin==true &&  <Link to="/profile"><Button color='inherit'>회원정보</Button></Link>}
         
         
         </Toolbar>
@@ -49,3 +79,5 @@ export default function Blog() {
     </React.Fragment>
   );
 }
+}
+export default Blog;
