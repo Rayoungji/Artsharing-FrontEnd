@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import ArtistMore from "./ArtistMore";
-import ArtistList from "./ArtistList";
+
 
 export default class Art extends Component {
     render() {
         return (
             <div>
-                <ArtistList />
-                <BrowserRouter>
-                    <Route exact path="/ArtistMore/:id" component={ArtistMore} />
-                </BrowserRouter>
+         작가 관리
             </div>
         );
     }
