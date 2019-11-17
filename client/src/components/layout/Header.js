@@ -59,8 +59,8 @@ class Blog extends React.Component {
                        <Grid container sm="4" />
                        <Grid container sm="2">
                            <Button color="inherit" href="/SignUp">회원가입</Button>
-                           {isLogin == false && <Login handleLogin={this.handleLogin} />}
-                           {isLogin == true && <Button onClick={this.handleLogout}>Logout</Button>}
+                           {isLogin === false && <Login handleLogin={this.handleLogin} />}
+                           {isLogin === true && <Button onClick={this.handleLogout}>Logout</Button>}
                        </Grid>
                    </Toolbar>
                    <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
@@ -68,7 +68,7 @@ class Blog extends React.Component {
                        <Link to="/artistList"> <Button color="inherit">작가보기</Button></Link>
                        <Button color="inherit" href="/artistOnly">작품관리</Button>
                        <Button color="inherit" href="/rentList">대여관리</Button>
-                       {isLogin == true && <Link to="/profile"><Button color="inherit">회원정보</Button></Link>}
+                       {isLogin === true && <Link to="/profile"><Button color="inherit">회원정보</Button></Link>}
 
 
                    </Toolbar>
