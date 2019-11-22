@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import Input from "@material-ui/core/Input";
 import FormLabel from "@material-ui/core/FormLabel";
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 import { Container } from "@material-ui/core";
 import { Card } from "@material-ui/core";
@@ -12,18 +12,18 @@ import Axios from "axios";
 
 class Artist extends React.Component {
     state={
-        data: {
+       data: {
             // mno: 0, //회원번호
-            affiliation: "", //소속
-            age: "", //나이
-            id: "", //아이디
-            name: "신가은", //이름
-            password: "", //비밀번호
-            phone: "", //전화번호
-            role: "", //역할
-            sex: "", //성별
+            affiliation: "", // 소속
+            age: "", // 나이
+            id: "", // 아이디
+            name: "신가은", // 이름
+            password: "", // 비밀번호
+            phone: "", // 전화번호
+            role: "", // 역할
+            sex: "", // 성별
         },
-        isLoading: true,
+        isLoading:  true,
     }
 
     componentDidMount =async () => {
@@ -63,17 +63,16 @@ class Artist extends React.Component {
 
         return (
             <React.Fragment>
-                {/* {isLoading === false
-                && 
-                ( */}
+                {isLoading === false
+                &&                (
                     <React.Fragment>
                         <h1>회원정보</h1>
                         <form>
-                        <div className="Artist">
-                        
-                            
-                            <FormLabel htmlFor="affiliation">소속</FormLabel>   
-                            <Input
+                            <div className="Artist">
+
+
+                                <FormLabel htmlFor="affiliation">소속</FormLabel>
+                                <Input
                                     type="text"
                                     value={data.affiliation}
                                     name="affiliation"
@@ -81,7 +80,7 @@ class Artist extends React.Component {
                                     placeholder=""
                                     onChange={this.handleChange}
                                 />
-                                <br/>
+                                <br />
 
                                 <FormLabel htmlFor="age">나이</FormLabel>
                                 <Input
@@ -145,16 +144,16 @@ class Artist extends React.Component {
                                 />
 
                                 <br />
-                                
-                                <Button type="submit" variant="contained" color="secondary" >등록</Button>                           
-                            
 
-                        </div>
+                                <Button type="submit" variant="contained" color="secondary">등록</Button>
+
+
+                            </div>
                         </form>
                     </React.Fragment>
-                {/* )
-                } */}
-                {/* {isLoading === true && <div>Loading</div>} */}
+                )
+                }
+                {isLoading === true && <div>Loading</div>}
             </React.Fragment>
         );
     }

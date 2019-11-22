@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Rent from "./Rent";
+import Artist from "./Artist";
 
-export default class RentList extends Component {
+export default class ArtistList extends Component {
     state={
 
-        Artworks: [
+        Artists: [
             {
                 id: 1,
                 image: "https://placeimg.com/64/64/1",
@@ -33,7 +33,7 @@ export default class RentList extends Component {
     render() {
         return (
 
-            <Rent rentList={this.state.Artworks} />
+            <Artist artistList={this.state.Artists} />
 
         );
     }

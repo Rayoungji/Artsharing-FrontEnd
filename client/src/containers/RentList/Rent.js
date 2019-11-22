@@ -6,6 +6,7 @@ import TableBody from "@material-ui/core/TableBody";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import style from "../../styles/RentalIndex";
+import Axios from "../../lib";
 
 export default class Rental extends Component {
     render() {
