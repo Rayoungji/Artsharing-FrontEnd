@@ -67,10 +67,7 @@ class ArtItemAdd extends Component {
       const { artName, explanation, price } = this.state;
 
       formData.append("imageFile", this.state.file);
-      // formData.append('artName', this.state.artName)
-      // formData.append('explanation', this.state.explanation)
-      // formData.append('price', this.state.price)
-
+   
       const config = {
           headers: {
               "Content-type": "multipart/form-data",
@@ -120,6 +117,7 @@ class ArtItemAdd extends Component {
 
   handleFormSubmit = (e) => {
       e.preventDefault();
+
 
       console.log("handleFormSubmit 들어옴.");
 
@@ -175,21 +173,9 @@ class ArtItemAdd extends Component {
                               value={this.state.artName}
                               onChange={this.handleValueChange}
                           /><br />
-                          {/* <TextField
-                  style={{marginBottom: 15,}}
-                  variant="outlined"
-                  fullWidth
-                  // helperText="작가"
-                  label="작가"
-                  type="text"
-                  name="member"
-                  value={this.state.member}
-                  onChange={this.handleValueChange}
-                  /><br/> */}
-
+               
                           <TextField
                               id="outlined-adornment-weight"
-                              // className={clsx(classes.margin, classes.textField)}
                               variant="outlined"
                               label="대여가"
                               type="number"
@@ -217,7 +203,7 @@ class ArtItemAdd extends Component {
 
                       <DialogActions>
                           <Button variant="outlined" color="primary" onClick={this.handleClose}>취소</Button>
-                          <Button type="submit" variant="contained" color="secondary">등록</Button>
+                          <Button type="submit" variant="contained" color="secondary" onClick={this.handleClose}>등록</Button>
                       </DialogActions>
                   </form>
               </Dialog>

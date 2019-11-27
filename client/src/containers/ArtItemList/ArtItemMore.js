@@ -16,6 +16,7 @@ const ArtItemMore = ({ match }) => {
     console.log(match.params.id);
     const [artItem, setArtItem] = useState(null);
 
+
     useEffect(() => {
         const { id } = match.params;
 

@@ -12,7 +12,7 @@ export default class Rental extends Component {
     render() {
         const { rentList } = this.props;
         const classes = style.bind();
-
+        console.log(rentList);
         return (
 
             <Paper className={classes.root}>
