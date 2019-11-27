@@ -61,7 +61,7 @@ const ArtistItem = ({ match }) => {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Link to={`/ArtItemMore/${card.id}`} size="small" color="primary">
+                                            <Link to={`/ArtistItemMore/${card.id}`} size="small" color="primary">
                                 작품 상세보기
                                             </Link>
                                         </CardActions>

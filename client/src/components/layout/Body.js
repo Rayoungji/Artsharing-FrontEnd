@@ -14,6 +14,7 @@ import Main from "../../containers/Main";
 import ArtistOnlyMore from "../../containers/ArtistOnly/ArtistOnlyMore";
 import ArtistItem from "../../containers/ArtistList/ArtistItem";
 import ArtistOnlyMoreUpdate from "../../containers/ArtistOnly/ArtistOnlyMoreUpdate";
+import ArtistItemMore from "../../containers/ArtistList/ArtistItemMore";
 
 export default function Blog() {
     const classes = useStyles();
@@ -21,7 +22,7 @@ export default function Blog() {
     return (
 
         <React.Fragment>
-         
+
             <CssBaseline />
             <Container maxWidth="lg">
 
@@ -33,6 +34,7 @@ export default function Blog() {
                         <Route exact path="/ArtItemMore/:id" component={ArtItemMore} />{/* 작품상세화면 */}
                         <Route exact path="/artist" component={ArtistList} />{/* 작가보기 */}
                         <Route exact path="/ArtistItem/:id" component={ArtistItem} />{/* 작가 상세화면- 작품들 */}
+                        <Route exact path="/ArtistItemMore/:id" component={ArtistItemMore} />{/* 작가 상세화면-작품들-작품상세보기 */}
                         <Route exact path="/artistOnly" component={ArtistOnly} />{/* 작품관리 */}
                         <Route exact path="/ArtistOnlyMore/:id" component={ArtistOnlyMore} />{/* 작품상세화면 */}
                         <Route exact path="/rentList" component={RentList} />{/* 대여관리 */}
