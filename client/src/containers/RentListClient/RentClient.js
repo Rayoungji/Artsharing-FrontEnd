@@ -20,7 +20,7 @@ export default class RentaClient extends Component {
                 <Table className={classes.table}>
                     <TableHead>
                         <TableRow>
-                            <TableCell>이미지</TableCell>
+                            <TableCell>작품명</TableCell>
                             <TableCell>대여일</TableCell>
                             <TableCell>반납일</TableCell>
                         </TableRow>

@@ -6,9 +6,11 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Card } from "@material-ui/core";
-import axios from 'axios';
-import useStyles from '../../styles/ArtItemMoreIndex';
-import ArtistOnlyMoreDelete from './ArtistOnlyMoreDelet'
+import { Link } from "react-router-dom";
+import axios from "axios";
+import useStyles from "../../styles/ArtItemMoreIndex";
+import ArtistOnlyMoreDelete from "./ArtistOnlyMoreDelet";
+import ArtistOnlyMoreUpdate from "./ArtistOnlyMoreUpdate";
 
 
 const ArtistOnlyMore = ({ match }) => {
@@ -35,7 +37,7 @@ const ArtistOnlyMore = ({ match }) => {
 
     return (
         artItem && (
-      <div className={classes.root}>
+            <div className={classes.root}>
                 <Grid container spacing={8}>
                     <Grid item>
                         <Card className={classes.image}>
@@ -67,12 +69,10 @@ const ArtistOnlyMore = ({ match }) => {
 
                 <Grid container xs={12} direction="row" justify="flex-end" alignItems="flex-start">
                     <Grid>
-                        <Button href ={`/ArtistOnlyMoreUpdate/${artItem.id}`} size="small" color="primary">
-                                수정하기
-                        </Button>
+                        <ArtistOnlyMoreUpdate id={artItem.id} />
                     </Grid>
                     <Grid>
-                        <ArtistOnlyMoreDelete id ={artItem.id} />
+                        <ArtistOnlyMoreDelete id={artItem.id} />
                     </Grid>
                 </Grid>
 
@@ -81,5 +81,4 @@ const ArtistOnlyMore = ({ match }) => {
         )
     );
 };
-export default ArtistOnlyMore
-;
+export default ArtistOnlyMore;

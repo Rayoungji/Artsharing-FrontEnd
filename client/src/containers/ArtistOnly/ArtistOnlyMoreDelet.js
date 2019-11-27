@@ -20,7 +20,6 @@ class ArtistOnlyMoreDelete extends Component {
 
 
     handleClickOpen = () => {
-        console.log(this.state.id);
         this.setState({
             setOpen: true,
             open: true,

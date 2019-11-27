@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActionArea from "@material-ui/core/CardActionArea";
 import useStyles from "../../styles/ArtItemListIndex";
 
 // 말줄임 다시하기
@@ -43,7 +43,7 @@ class ArtistOnlyItem extends Component {
                                     </CardContent>
 
                                     <CardActions>
-                                        <Button href ={`/ArtistOnlyMore/${card.id}`} size="small" color="primary">
+                                        <Button href={`/ArtistOnlyMore/${card.id}`} size="small" color="primary">
                                 작품 상세보기
                                         </Button>
                                     </CardActions>
