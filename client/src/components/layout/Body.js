@@ -31,16 +31,17 @@ export default function Blog() {
 
                         <Route exact path="/" component={Main} /> {/* 메인화면 */}
                         <Route exact path="/artItemList" component={ArtItemList} /> {/* 작품보기 */}
-                        <Route exact path="/ArtItemMore/:id" component={ArtItemMore} />{/* 작품상세화면 */}
+                        <Route exact path="/ArtItemMore/:id" component={ArtItemMore} />{/* 작품상세보기 */}
                         <Route exact path="/artist" component={ArtistList} />{/* 작가보기 */}
-                        <Route exact path="/ArtistItem/:id" component={ArtistItem} />{/* 작가 상세화면- 작품들 */}
-                        <Route exact path="/ArtistItemMore/:id" component={ArtistItemMore} />{/* 작가 상세화면-작품들-작품상세보기 */}
+                        <Route exact path="/ArtistItem/:id" component={ArtistItem} />{/* 작가 작품보기 */}
+                        <Route exact path="/ArtistItemMore/:id" component={ArtistItemMore} />{/* 작가 작품 상세보기 */}
                         <Route exact path="/artistOnly" component={ArtistOnly} />{/* 작품관리 */}
-                        <Route exact path="/ArtistOnlyMore/:id" component={ArtistOnlyMore} />{/* 작품상세화면 */}
+                        <Route exact path="/ArtistOnlyMore/:id" component={ArtistOnlyMore} />{/* 작품관리 -> 작품 상세보기 */}
+                        <Route exact path="/ArtistOnlyMoreUpdate/:id" component={ArtistOnlyMoreUpdate} />{/* 작품관리 -> 작품 상세보기 중 수정 */}
                         <Route exact path="/rentList" component={RentList} />{/* 대여관리 */}
-                        <Route exact path="/profile" component={Profile} />{/* 회원정보란 */}
+                        <Route exact path="/profile" component={Profile} />{/* 회원정보 */}
                         <Route exact path="/signup" component={SignUp} />{/* 회원가입 */}
-                        <Route exact path="/ArtistOnlyMoreUpdate/:id" component={ArtistOnlyMoreUpdate} />{/* 작가-작품상세화면 수정 */}
+                       
 
                     </Container>
                 </div>
