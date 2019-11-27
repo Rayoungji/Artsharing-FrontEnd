@@ -67,7 +67,8 @@ class Blog extends React.Component {
                        <Link to="/artItemList"><Button color="inherit" noWrap variant="body2" className={classes.toolbarLink}>작품보기</Button></Link>
                        <Link to="/artist"> <Button color="inherit">작가보기</Button></Link>
                        <Link to="/artistOnly"><Button color="inherit">작품관리</Button></Link>
-                       <Link to="/rentList"><Button color="inherit">대여관리</Button></Link>
+                       <Link to="/rentList"><Button color="inherit">대여관리(작가용)</Button></Link>
+                       <Link to="/rentListClient"><Button color="inherit">대여관리(고객용)</Button></Link>
                        {isLogin === true
                             && <Link to="/profile"><Button color="inherit">회원정보</Button></Link>
                        }
