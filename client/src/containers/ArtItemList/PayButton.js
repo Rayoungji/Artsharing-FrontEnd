@@ -80,7 +80,7 @@ handleValueChange= (e) => {
                   </DialogContent>
                   <DialogContent>반납날짜를 입력하세요.</DialogContent>
                   <DialogContent>
-                      <TextField name="returnDate" type="text" value={this.state.returnDate} onChange={this.handleValueChange} />
+                      <TextField name="returnDate" type="date" value={this.state.returnDate} onChange={this.handleValueChange} />
                   </DialogContent>
                   <DialogContent>대여료를 입력하세요</DialogContent>
                   <DialogContent>

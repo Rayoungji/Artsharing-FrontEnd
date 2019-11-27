@@ -42,7 +42,7 @@ export default function Blog() {
                         <Route exact path="/rentList" component={RentList} />{/* 대여관리 */}
                         <Route exact path="/profile" component={Profile} />{/* 회원정보 */}
                         <Route exact path="/signup" component={SignUp} />{/* 회원가입 */}
-                        <Route exact path="/RentArtistItem" component={RentArtistItem} />{/* 작품에 대한 대여현황 */}
+                        <Route exact path="/RentArtistItem/:id" component={RentArtistItem} />{/* 작품에 대한 대여현황 */}
                        
 
                     </Container>
