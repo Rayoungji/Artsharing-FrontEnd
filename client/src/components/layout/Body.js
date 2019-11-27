@@ -15,6 +15,7 @@ import ArtistOnlyMore from "../../containers/ArtistOnly/ArtistOnlyMore";
 import ArtistItem from "../../containers/ArtistList/ArtistItem";
 import ArtistOnlyMoreUpdate from "../../containers/ArtistOnly/ArtistOnlyMoreUpdate";
 import ArtistItemMore from "../../containers/ArtistList/ArtistItemMore";
+import RentArtistItem from "../../containers/RentList/RentArtistItem";
 
 export default function Blog() {
     const classes = useStyles();
@@ -41,6 +42,7 @@ export default function Blog() {
                         <Route exact path="/rentList" component={RentList} />{/* 대여관리 */}
                         <Route exact path="/profile" component={Profile} />{/* 회원정보 */}
                         <Route exact path="/signup" component={SignUp} />{/* 회원가입 */}
+                        <Route exact path="/RentArtistItem" component={RentArtistItem} />{/* 작품에 대한 대여현황 */}
                        
 
                     </Container>

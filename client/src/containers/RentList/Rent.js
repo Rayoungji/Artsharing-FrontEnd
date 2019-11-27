@@ -5,6 +5,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableBody from "@material-ui/core/TableBody";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
+import { Link } from "react-router-dom";
 import style from "../../styles/RentalIndex";
 import Axios from "../../lib";
 
@@ -19,21 +20,17 @@ export default class Rental extends Component {
                 <Table className={classes.table}>
                     <TableHead>
                         <TableRow>
-                            <TableCell>번호</TableCell>
                             <TableCell>이미지</TableCell>
                             <TableCell>작품이름</TableCell>
-                            <TableCell>대여인아이디</TableCell>
-                            <TableCell>대여기간</TableCell>
+                            <TableCell>대여상황</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {rentList.map(c => (
                             <TableRow>
-                                <TableCell>{c.id}</TableCell>
                                 <TableCell><img src={c.image} alt="profile" /></TableCell>
-                                <TableCell>{c.ArtName}</TableCell>
-                                <TableCell>{c.Customer}</TableCell>
-                                <TableCell>{c.RentalDate}</TableCell>
+                                <TableCell>{c.artName}</TableCell>
+                                <TableCell><Link to={`/RentArtistItem/${c.id}`} size="small" color="primary">대여현황</Link></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
